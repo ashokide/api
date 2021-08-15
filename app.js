@@ -17,25 +17,23 @@ const setData = () => {
         <td>${data.email}</td> 
         <td>${data.phone}</td> 
         <td>${data.userType}</td>
-        <td><button onclick=editAction("${data._id}")>Edit</button>
-        <button onclick=deleteAction("${data._id}")>Delete</button></td>`
+        <td><button class="btn btn-info m-2 bg-info" onclick=editAction("${data._id}")>Edit</button>
+        <button class="btn btn-warning m-2 bg-warning" onclick=deleteAction("${data._id}")>Delete</button></td>`
                 mytable.appendChild(tr)
             })
         }
     })
 }
-
+setInterval(() => {
+    getData().then(data => {
+        if (myData.length !== data.length) {
+            refreshData()
+        }
+    })
+}, 500);
 window.onload = setData
 const refreshData = () => {
-    mytable.innerHTML = `<tr>
-    <th>Object Id</th>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Phone No.</th>
-    <th>User Type</th>
-    <th>Actions</th>
-    </tr>`;
-    setData()
+    window.location.reload()
 }
 
 async function editAction(id) {
@@ -57,8 +55,7 @@ async function editAction(id) {
     const update = document.querySelector('#update')
     const cancel = document.querySelector('#cancel')
     cancel.addEventListener('click', () => {
-        editContainer.style.display = 'none'
-        mytable.style.display = 'block'
+        refreshData()
     })
 
     update.addEventListener('click', async () => {
@@ -78,7 +75,7 @@ async function editAction(id) {
         })
 
         editContainer.style.display = 'none'
-        mytable.style.display = 'block'
+        mytable.style.display = 'flex'
         refreshData()
     })
 }
@@ -92,5 +89,4 @@ async function deleteAction(id) {
             },
         })
     }
-    refreshData()
 }

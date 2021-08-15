@@ -1,18 +1,7 @@
 *{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-table{
-    border-collapse: collapse;
-}
-td{
-    padding: 3px;
-    background-color: lightblue;
-    color: black;
-}
-th{
-    background-color: indigo;
-    color: white;
-    padding: 3px;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
 }
 .edit-container{
     display: none;
