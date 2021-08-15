@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Api</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <table id="mytable">
+            <tr>
+                <th>Object Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone No.</th>
+                <th>User Type</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="edit-container">
+        <fieldset>
+            <legend>Edit Data</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"><br><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"><br><br>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone"><br><br>
+            <label for="userType">User Type</label>
+            <select name="userType" id="userType">
+                <option value="Free">Free</option>
+                <option value="Pro">Pro</option>
+                <option value="Premium">Premium</option>
+            </select>
+            <br><br>
+            <button id="update">Update</button>
+            <button id="cancel">Cancel</button>
+        </fieldset>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
