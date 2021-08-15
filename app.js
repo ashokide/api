@@ -79,6 +79,44 @@ async function editAction(id) {
         refreshData()
     })
 }
+
+const newBtn = document.querySelector("#new")
+newBtn.addEventListener('click', () => {
+    const newContainer = document.querySelector('.new-container');
+    newContainer.style.display = 'block'
+    mytable.style.display = 'none'
+    const name = document.querySelector('#newname')
+    const email = document.querySelector('#newemail')
+    const phone = document.querySelector('#newphone')
+    const userType = document.querySelector('#newuserType')
+
+    const create = document.querySelector('#create')
+    const cancel = document.querySelector('#newcancel')
+    cancel.addEventListener('click', () => {
+        refreshData()
+    })
+
+    create.addEventListener('click', async () => {
+        await fetch(`https://ashok-api.herokuapp.com/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                newUser: {
+                    name: name.value,
+                    email: email.value,
+                    phone: phone.value,
+                    userType: userType.value
+                }
+            })
+        })
+
+        newContainer.style.display = 'none'
+        mytable.style.display = 'block'
+        refreshData()
+    })
+})
 async function deleteAction(id) {
     const result = confirm("Do you want to delete")
     if (result) {

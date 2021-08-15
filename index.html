@@ -17,9 +17,9 @@
 <body>
 
     <div class="container-fluid">
-        <p class="text-center h4">User Data</p>
+        <p class="text-center h4">User Data <button class="btn btn-primary" id="new">New User</button></p>
         <div class="col-sm-12 col-8 table-responsive w-100 ">
-            <table id="mytable" class="table table-bordered w-100 ">
+            <table id="mytable" class="table table-striped w-100 ">
                 <thead class="bg-secondary text-white text-center">
                     <tr>
                         <th>Object Id</th>
@@ -50,6 +50,25 @@
             <br><br>
             <button class="btn btn-success" id="update">Update</button>
             <button class="btn btn-warning" id="cancel">Cancel</button>
+        </div>
+
+        <div class="new-container mx-auto col-sm-12 col-lg-8 bg-secondary py-2 text-white">
+            <p>New User Data</p>
+            <label class="form-label" for="newname">Name</label>
+            <input class="form-control" type="text" name="newname" id="newname" required><br><br>
+            <label class="form-label" for="newemail">Email</label>
+            <input class="form-control" type="email" name="newemail" id="newemail" required><br><br>
+            <label class="form-label" for="newphone">Phone</label>
+            <input class="form-control" type="tel" name="newphone" id="newphone" required><br><br>
+            <label class="form-label" for="newuserType">User Type</label>
+            <select class="form-select" name="newuserType" id="newuserType">
+                <option value="Free" selected>Free</option>
+                <option value="Pro">Pro</option>
+                <option value="Premium">Premium</option>
+            </select>
+            <br><br>
+            <button class="btn btn-success" id="create">Create</button>
+            <button class="btn btn-warning" id="newcancel">Cancel</button>
         </div>
     </div>
     <script src="./app.js"></script>

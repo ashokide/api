@@ -3,7 +3,7 @@
     border:0;
     box-sizing: border-box;
 }
-.edit-container{
+.edit-container,.new-container{
     display: none;
     text-align: center;
     font-size: large;
