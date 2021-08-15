@@ -5,4 +5,7 @@
 }
 .edit-container{
     display: none;
+    text-align: center;
+    font-size: large;
+    padding: 15px;
 }

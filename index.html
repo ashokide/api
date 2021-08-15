@@ -15,9 +15,11 @@
 </head>
 
 <body>
+
     <div class="container-fluid">
-        <div class="container col-sm-12 col-8">
-            <table id="mytable" class="table table-bordered">
+        <p class="text-center h4">User Data</p>
+        <div class="col-sm-12 col-8 table-responsive w-100 ">
+            <table id="mytable" class="table table-bordered w-100 ">
                 <thead class="bg-secondary text-white text-center">
                     <tr>
                         <th>Object Id</th>
@@ -31,25 +33,23 @@
             </table>
         </div>
 
-        <div class="edit-container container col-sm-12 col-8">
-            <fieldset>
-                <legend>Edit Data</legend>
-                <label class="form-label" for="name">Name</label>
-                <input class="form-control" type="text" name="name" id="name"><br><br>
-                <label class="form-label" for="email">Email</label>
-                <input class="form-control" type="email" name="email" id="email"><br><br>
-                <label class="form-label" for="phone">Phone</label>
-                <input class="form-control" type="tel" name="phone" id="phone"><br><br>
-                <label class="form-label" for="userType">User Type</label>
-                <select class="form-select" name="userType" id="userType">
-                    <option value="Free">Free</option>
-                    <option value="Pro">Pro</option>
-                    <option value="Premium">Premium</option>
-                </select>
-                <br><br>
-                <button class="btn btn-success" id="update">Update</button>
-                <button class="btn btn-warning" id="cancel">Cancel</button>
-            </fieldset>
+        <div class="edit-container mx-auto col-sm-12 col-lg-8 bg-secondary py-2 text-white">
+            <p>Edit Data</p>
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" type="text" name="name" id="name"><br><br>
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email"><br><br>
+            <label class="form-label" for="phone">Phone</label>
+            <input class="form-control" type="tel" name="phone" id="phone"><br><br>
+            <label class="form-label" for="userType">User Type</label>
+            <select class="form-select" name="userType" id="userType">
+                <option value="Free">Free</option>
+                <option value="Pro">Pro</option>
+                <option value="Premium">Premium</option>
+            </select>
+            <br><br>
+            <button class="btn btn-success" id="update">Update</button>
+            <button class="btn btn-warning" id="cancel">Cancel</button>
         </div>
     </div>
     <script src="./app.js"></script>
